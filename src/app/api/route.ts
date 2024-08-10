@@ -9,7 +9,6 @@ export async function GET(request: Request) {
     const response = await axios.get(`https://ffb.vn/api/tool/get-id-fb?idfb=${fburl}`);
     
     if (response.data) {
-      console.log("vào đây");
       const htmlData = response.data;
       return NextResponse.json({ id: htmlData.id }, { status: 200 });
     } else {
