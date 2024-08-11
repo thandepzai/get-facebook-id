@@ -1,0 +1,7 @@
+.plyr-wrapper :global(.plyr__time--duration) {
+    @apply hidden;
+}
+
+.plyr-wrapper :global(.plyr__menu__container .plyr__control > span) {
+    @apply font-medium;
+}
