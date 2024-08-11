@@ -1,7 +1,7 @@
 import AppVideo from "@/components/Video";
 import { AppVideoProps, AppVideoType } from "@/components/Video/type";
 
-export default async function Home() {
+export default function Home() {
   const getAppVideoProps = (video: any): AppVideoProps => {
     return {
       type: AppVideoType.YOUTUBE,

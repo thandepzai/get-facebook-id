@@ -4,16 +4,15 @@ import { MutableRefObject, useEffect, useMemo, useRef } from "react";
 import "plyr/dist/plyr.css";
 import styles from "./style.module.css";
 import { PlyrVideoConfig } from "./config";
-import { HTMLPlyrVideoElement, PlyrProps } from "./PlyrHlsVideo";
 
 export const PlyrYoutubeVideo = (
-    props: Partial<PlyrProps> & {
+    props: Partial<any> & {
         youtubeUrl?: string;
         youtubeId: string;
-        videoRef?: MutableRefObject<HTMLPlyrVideoElement>;
+        videoRef?: MutableRefObject<any>;
     }
 ) => {
-    const playerRef = useRef<HTMLPlyrVideoElement>();
+    const playerRef = useRef<any>();
 
     const options = useMemo(
         () => ({
