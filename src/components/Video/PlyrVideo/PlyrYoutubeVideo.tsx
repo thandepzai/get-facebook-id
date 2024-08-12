@@ -43,10 +43,10 @@ export const PlyrYoutubeVideo = (
             playerRef.current.plyr = plyrPlayer;
         }
 
-        const plyrContainer = document.querySelector("#mapstudy-plyr-ytb");
-        if (plyrContainer) {
-            plyrContainer.classList.add("[&>div>iframe]:pointer-events-none");
-        }
+        // const plyrContainer = document.querySelector("#mapstudy-plyr-ytb");
+        // if (plyrContainer) {
+        //     plyrContainer.classList.add("[&>div>div>iframe]:pointer-events-none");
+        // }
     };
 
     return (

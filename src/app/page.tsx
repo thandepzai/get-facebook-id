@@ -10,9 +10,11 @@ export default function Home() {
   };
   return (
     <div>
-      <AppVideo
-        {...getAppVideoProps("https://www.youtube.com/watch?v=U6446tlNDZc")}
-      />
+      <div className="w-[500px] mx-auto">
+        <AppVideo
+          {...getAppVideoProps("https://www.youtube.com/watch?v=U6446tlNDZc")}
+        />
+      </div>
     </div>
   );
 }
