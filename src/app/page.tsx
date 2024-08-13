@@ -10,9 +10,9 @@ export default function Home() {
   };
   return (
     <div>
-      <div className="w-[500px] mx-auto">
+      <div className="max-w-[500px] mx-auto">
         <AppVideo
-          {...getAppVideoProps("https://www.youtube.com/watch?v=U6446tlNDZc")}
+          {...getAppVideoProps("https://www.youtube.com/embed/xfBbLg6-4xY?si=xVoNOLkKA4al1yiM")}
         />
       </div>
     </div>
