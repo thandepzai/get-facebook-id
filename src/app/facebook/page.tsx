@@ -9,16 +9,21 @@ export async function generateMetadata(
   { params, searchParams }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  // read route params
-  const id = params.id;
+  const title = searchParams.title
+    ? String(searchParams.title)
+    : "Default Title";
+  const images = searchParams.images
+    ? String(searchParams.images)
+    : "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg";
 
   return {
     openGraph: {
-      title: "Thân đẹp zai",
+      title: title,
       description: "Chưa biết ghi gì luôn",
-        url: "https://mapstudy.edu.vn/",
-      images:
-        "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
+      url: "https://mapstudy.edu.vn/",
+      type: "website",
+      phoneNumbers: "abc",
+      images: images,
     },
   };
 }
