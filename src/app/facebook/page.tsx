@@ -31,19 +31,5 @@ import { useSearchParams } from "next/navigation";
 // }
 
 export default function ShareView() {
-  const searchParams = useSearchParams();
-  const images = searchParams.get("images");
-  console.log("🚀 ~ ShareView ~ images:", images);
-  return (
-    <div>
-      <head>
-        <meta name="og:url" content="https://mapstudy.edu.vn/" />
-        <meta name="og:title" content="Thân đẹp zai" />
-        <meta name="og:description" content="Cái gì cơ" />
-        <meta name="og:type" content="website" />
-        <meta name="og:images" content={images ?? "abc"} />
-      </head>
-      <img src="images" alt="" />
-    </div>
-  );
+  return <div>fsdfs</div>;
 }
