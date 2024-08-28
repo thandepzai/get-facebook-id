@@ -1,4 +1,5 @@
 import type { Metadata, ResolvingMetadata } from "next";
+import { redirect } from "next/navigation";
 
 type Props = {
   params: { id: string };
