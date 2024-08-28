@@ -16,7 +16,7 @@ export async function generateMetadata(
     openGraph: {
       title: "Thân đẹp zai",
       description: "Chưa biết ghi gì luôn",
-        url: "Mapstudy.com",
+        url: "https://mapstudy.edu.vn/",
       images:
         "https://www.simplilearn.com/ice9/free_resources_article_thumb/what_is_image_Processing.jpg",
     },
