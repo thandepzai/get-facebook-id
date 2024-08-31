@@ -15,14 +15,17 @@ const FacebookShareButton: React.FC<FacebookShareButtonProps> = ({
     loadFacebookSDK(appId);
   }, [appId]);
 
-
   const handleShareClick = async () => {
     try {
-      if (window.FB) {
+      if (window.FB && window.FB.init) {
         window.FB.ui(
           {
-            method: "share",
-            href: href,
+            display: "popup",
+            method: "share_open_graph",
+            action_type: "og.likes",
+            action_properties: JSON.stringify({
+              object: "https://mapstudy.edu.vn/", // URL bạn muốn chia sẻ
+            }),
           },
           (response: any) => {
             console.log("Response:", response);

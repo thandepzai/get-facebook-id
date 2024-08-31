@@ -24,7 +24,7 @@ export const loadFacebookSDK = (appId: string) => {
       appId: appId,
       cookie: true,
       xfbml: true,
-      version: "v12.0",
+      version: "v16.0",
     });
   };
 };
