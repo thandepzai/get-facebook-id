@@ -15,21 +15,9 @@ const FacebookShareButton: React.FC<FacebookShareButtonProps> = ({
     loadFacebookSDK(appId);
   }, [appId]);
 
-  const checkLoginStatus = () => {
-    return new Promise((resolve, reject) => {
-      window.FB.getLoginStatus((response: any) => {
-        if (response.status === "connected") {
-          resolve(response);
-        } else {
-          reject("Người dùng chưa đăng nhập.");
-        }
-      });
-    });
-  };
 
   const handleShareClick = async () => {
     try {
-      await checkLoginStatus();
       if (window.FB) {
         window.FB.ui(
           {
