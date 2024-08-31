@@ -1,6 +1,12 @@
-"use client"
+"use client";
 import { useEffect } from "react";
 import type { NextPage } from "next";
+
+declare global {
+  interface Window {
+    FB: any;
+  }
+}
 
 // Component để chia sẻ lên Facebook
 const FacebookShareButton = () => {
@@ -13,7 +19,7 @@ const FacebookShareButton = () => {
 
     script.onload = () => {
       window.fbAsyncInit = function () {
-        FB.init({
+        window.FB.init({
           appId: "1559858418286492", // Thay thế bằng appId của bạn
           autoLogAppEvents: true,
           xfbml: true,
