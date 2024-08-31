@@ -11,7 +11,6 @@ declare global {
 // Component để chia sẻ lên Facebook
 const FacebookShareButton = () => {
   useEffect(() => {
-    // Load Facebook SDK script
     const script = document.createElement("script");
     script.src = "https://connect.facebook.net/en_US/sdk.js";
     script.async = true;
@@ -20,7 +19,7 @@ const FacebookShareButton = () => {
     script.onload = () => {
       window.fbAsyncInit = function () {
         window.FB.init({
-          appId: "1559858418286492", // Thay thế bằng appId của bạn
+          appId: "1559858418286492",
           autoLogAppEvents: true,
           xfbml: true,
           version: "v16.0",
@@ -29,7 +28,6 @@ const FacebookShareButton = () => {
     };
 
     return () => {
-      // Clean up the script
       document.body.removeChild(script);
     };
   }, []);
